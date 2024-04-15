@@ -1,9 +1,10 @@
 [tool.poetry]
 name = "sqlalchemy-schema-factory"
-version = "0.1.1"
+version = "0.1.2"
 description = "Collection of tools for building sqlalchemy schemas"
 readme = "README.md"
 authors = ["Smairon <man@smairon.ru>"]
+repository = "https://github.com/smairon/sqlalchemy-schema-factory"
 packages = [{ include = "sqlalchemy_schema_factory" }]
 
 
