@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sqlalchemy-schema-factory"
-version = "0.1.2"
+version = "0.1.3"
 description = "Collection of tools for building sqlalchemy schemas"
 readme = "README.md"
 authors = ["Smairon <man@smairon.ru>"]
@@ -10,7 +10,7 @@ packages = [{ include = "sqlalchemy_schema_factory" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-sqlalchemy = "^1.4.39"
+sqlalchemy = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 
