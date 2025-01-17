@@ -29,7 +29,11 @@ def integer_primary_key() -> sqlalchemy.Column:
 
 def uuid_primary_key() -> sqlalchemy.Column:
     return sqlalchemy.Column(
-        "id", sqlalchemy.dialects.postgresql.UUID(as_uuid=True), primary_key=True, nullable=False
+        "id",
+        sqlalchemy.dialects.postgresql.UUID(as_uuid=True),
+        primary_key=True,
+        nullable=False,
+        server_default=sqlalchemy.text("gen_random_uuid()")
     )
 
 
