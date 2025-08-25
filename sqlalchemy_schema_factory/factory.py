@@ -107,6 +107,25 @@ def jsonb(name: str, index: bool = False, nullable: bool = True, **kwargs) -> sq
         **kwargs,
     )
 
+def jsonb_aware(name: str, index: bool = False, nullable: bool = True, **kwargs) -> sqlalchemy.Column:
+    """
+    JSONB column that can store/retrieve UUIDs and datetimes in proper way.
+
+    Args:
+        name (str): Column name
+        index (bool, optional): Whether to index the column. Defaults to False.
+        nullable (bool, optional): Whether the column can be null. Defaults to True.
+
+    Returns:
+        sqlalchemy.Column: _description_
+    """
+    return column(
+        name,
+        aux.UUIDAwareJSONB,
+        index=index,
+        nullable=nullable,
+        **kwargs,
+    )
 
 def integer(
     name: str,
