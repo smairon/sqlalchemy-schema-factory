@@ -39,6 +39,7 @@ def compile_query(
 
 class UUIDAwareJSONB(sqlalchemy.TypeDecorator):
     impl = sqlalchemy.dialects.postgresql.JSONB
+    cache_ok = True
     
     def process_bind_param(self, value, dialect):
         """Convert Python objects to JSON-serializable format before insertion"""
